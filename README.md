@@ -17,7 +17,7 @@ rails server .
 This will install all the necessary dependencies, set up the database, and start the Rails server.
 
 ## Usage
-To use this app, simply navigate to the localhost from your web browser. From there, you can view a list of all users, as well as add, edit, and delete users as needed.
+To use this app, simply navigate to the "http://localhost:3000" in your web browser. From there, you can view a list of all users, as well as add, edit, and delete users as needed.
 ```
 ./my_project argument1 argument2
 ```
