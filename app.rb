@@ -93,3 +93,4 @@ end
 #8 The code also defines a User class, which is responsible for managing the database of user records. The User class has methods for creating, updating, retrieving, and deleting user records, as well as a method for retrieving all user records.
 #9 The code uses the ERB templating engine to render the HTML view for the '/' endpoint. It also uses sessions to keep track of the currently logged-in user.
 #0 Overall, this code provides a basic RESTful API for user management, which can be used as a starting point for building more complex applications.
+
