@@ -11,10 +11,10 @@ enable :sessions  #Enable the use of sessions
 #Display the list of users on the index page
 get '/' do                 #Get the main page
     @users = User.new.all.map{|id, user| user.delete(:password); user}   #Get all the users and remove the password field
-    @users
+    @users 
     erb :index             #Render the index page using ERB
 end
-#
+
 get '/users' do             #get all users
     status 200              #set status code
     User.all.map{|col| col.slice("firstname", "lastname", "age", "email")}.to_json  # get all users and map them. converted to json
@@ -86,7 +86,7 @@ end
 #1 GET '/' - This endpoint retrieves a list of all users and renders an HTML view of the list.
 #2 GET '/users' - This endpoint retrieves a list of all users in JSON format.
 #3 POST '/users' - This endpoint creates a new user record based on the information submitted in the request body.
-4# POST '/sign_in' - This endpoint logs in a user by checking the email and password against the database.
+#4 POST '/sign_in' - This endpoint logs in a user by checking the email and password against the database.
 #5 PUT '/users' - This endpoint updates the password for the currently logged-in user.
 #6 DELETE '/sign_out' - This endpoint logs out the currently logged-in user.
 #7 DELETE '/users' - This endpoint deletes the currently logged-in user.
