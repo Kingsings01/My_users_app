@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>My_Users_App</title>
+    </head>
+    <body>
+        <h1>My Users App</h1>
+        <!-- This is a table to display the user information -->
+        <table>
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through all the users and display their information in a row -->
+                <% @users.each do |user| %>
+                <!-- Convert the user object to a JSON string, then parse it back into a Ruby hash -->
+                <% user = user.to_json  %> 
+                <% user = JSON.parse(user) %>
+                    <tr>
+                        <!-- Display the user information in the appropriate table cells -->
+                        <td><%= user['firstname'] %></td>
+                        <td><%= user['lastname'] %></td>
+                        <td><%= user['Age'] %></td>
+                        <td><%= user['mail'] %></td>
+                    </tr>
+                <% end %>
+            </tbody>            
+        </table>
+    </body>
+</html>
